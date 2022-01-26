@@ -2,7 +2,7 @@
 
 ## What I did
 
-### Install akash cli
+### 1. Install akash cli
 
 Follow the instruction in https://docs.akash.network/guides/cli/part-1.-install-akash to install the akash cli
 
@@ -14,3 +14,23 @@ $ brew link akash --force
 $ akash version
 v0.14.1
 ```
+
+### 2. Create an akash account
+
+Create an account with `make account`
+
+```
+$ make account
+
+- name: mywallet
+  type: local
+  address: an-address
+  pubkey: an-pubkey
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+
+seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase
+```
+
+Store and blackbox encrypt the info in wallet/akash-wallet.txt
