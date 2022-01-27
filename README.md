@@ -34,3 +34,7 @@ seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase seedphrase see
 ```
 
 Store and blackbox encrypt the info in wallet/akash-wallet.txt
+
+### 3. Get some AKT
+
+I sent some AKTs to the wallet.
