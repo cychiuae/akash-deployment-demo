@@ -14,3 +14,7 @@ network:
 check-account-balance: network
 	$(eval AKASH_ACCOUNT_ADDRESS := $(shell akash keys show $(AKASH_KEY_NAME) -a --keyring-backend file --keyring-dir ./wallet/akash-wallet))
 	akash query bank balances --node $(AKASH_NODE) $(AKASH_ACCOUNT_ADDRESS)
+
+.PHONY: deployment-template
+deployment-template:
+	curl -s https://raw.githubusercontent.com/ovrclk/docs/master/guides/deploy/deploy.yml > deploy.template.yaml
