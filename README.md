@@ -50,3 +50,17 @@ Fetching akash node...
 http://akash.c29r3.xyz:80/rpc akashnet-2
 
 ```
+
+### 5. Query account balance
+
+```sh
+$ make check-account-balance
+
+balances:
+- amount: "5000000"
+  denom: uakt
+pagination:
+  next_key: null
+  total: "0"
+
+```

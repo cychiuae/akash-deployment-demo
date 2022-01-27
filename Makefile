@@ -8,4 +8,9 @@ account:
 
 .PHONY: network
 network:
-	./scripts/configure-network.sh
+	@./scripts/configure-network.sh
+
+.PHONY: check-account-balance
+check-account-balance: network
+	$(eval AKASH_ACCOUNT_ADDRESS := $(shell akash keys show $(AKASH_KEY_NAME) -a --keyring-backend file --keyring-dir ./wallet/akash-wallet))
+	akash query bank balances --node $(AKASH_NODE) $(AKASH_ACCOUNT_ADDRESS)
