@@ -72,3 +72,29 @@ $ make account-certificate
 ```
 
 Received the response and confirm transaction and save the info in wallet/akash-wallet/certificate.txt
+
+### 7. Create a deployment
+
+```sh
+$ akash tx deployment create deploy.yaml --from $AKASH_KEY_NAME --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID --fees 5000uakt -y
+
+```
+
+### 8
+
+set gas to auto
+
+### 9
+
+Deployment flow
+
+1. Run `make deployment`
+1. Update `AKASH_DSEQ` in Makefile
+1. Run `make check-deployment-bid`
+1. Choose the one you want
+   - My experience is some providers is on9. Even though your deployment created and uploaded successfully, they still cant serve your service
+1. Update `AKASH_PROVIDER` in Makefile
+1. Run `make create-deployment-lease`
+1. Run `make check-lease`. Make sure the status is active but not close
+1. Run `make upload-manifest`
+1. Run `make confirm-lease` to get the public uri
