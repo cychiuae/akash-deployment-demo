@@ -38,3 +38,15 @@ Store and blackbox encrypt the info in wallet/akash-wallet.txt
 ### 3. Get some AKT
 
 I sent some AKTs to the wallet.
+
+### 4. Configure the network info
+
+```sh
+$ ./scripts/configure-network.sh
+
+Fetching akash version...
+Fetching akash chain id...
+Fetching akash node...
+http://akash.c29r3.xyz:80/rpc akashnet-2
+
+```
