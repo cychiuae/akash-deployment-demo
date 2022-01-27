@@ -64,3 +64,11 @@ pagination:
   total: "0"
 
 ```
+
+### 6. Create a certificate for akash-wallet
+
+```sh
+$ make account-certificate
+```
+
+Received the response and confirm transaction and save the info in wallet/akash-wallet/certificate.txt
